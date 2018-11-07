@@ -1,7 +1,100 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<title>My Page ^.^</title>
+ 		<link rel="stylesheet" type="text/css" href="styles/Website.css">
+ 	</head>
+ 	<body>
+ 		<ul>
+  			<li><a href="#home">Home</a></li>
+ 		 	<li><a href="#news">News</a></li>
+  			<li><a href="#contact">Contact</a></li>
+  			<li><a href="#about">About</a></li>
+		</ul>
+ 		<h1>Hello There & Welcome</h1>
+
+ 		<p>In this Page I will be addding things that I really like. I wanted to write this too let my computer stop trying to ask me if it wants it to translate lorem into this. Anyways This is my web page, what do you guys think? I know its alright you dont have to lie to me. I can take the hits. Live, love, and laugh is the right way to go. <a href="https://www.w3schools.com/tags/tag_body.asp">W3school</a></p>
+
+
+<h2>The Page of Muppets</h2>
+	<img src="https://i.ytimg.com/vi/Mq5LfuvRBVM/hqdefault.jpg" width="500" height="400">
+	<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/06/12/18/pg-32-muppets-rex.jpg?w968h681" width="400" height="400">
+	<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
+	<iframe width="420" height="345" src="https://www.youtube.com/embed/h4Bq69HfR0Y"></iframe>
+	<img src="" width="400" height="400">
+
+	</style>
+	</head>
+	<body>
+		
+		<script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+		<script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			
+			var camera, scene, renderer;
+			var geometry, material, mesh;
+
+			function setup() {
+
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( W, H );
+				document.body.appendChild( renderer.domElement );
+
+				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+				camera.position.z = 500;
+
+				scene = new THREE.Scene();
+				
+				
+				// paste your code from the geometryGUI here
+map = THREE.ImageUtils.loadTexture('../texturez/water.jpg');
+geometry = new THREE.OctahedronGeometry(150, 0);
+material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xf2abab, map: map, transparent: true, opacity: 0.64});
+mesh = new THREE.Mesh(geometry, material);
+map.wrapS = map.wrapT = THREE.RepeatWrapping;
+map.repeat.set( 1, 1 );
+scene.add(mesh);
+
+
+			}
+
+			function draw() {
+
+				requestAnimationFrame( draw );
+				
+				// experiment with code from the snippets menu here
+mesh.rotation.x = Date.now() * 0.0005;	
+				mesh.rotation.y = Date.now() * 0.0002;	
+				mesh.rotation.z = Date.now() * 0.001;
+geometry = new THREE.Geometry();
+				for ( i = 0; i < 500; i ++ ) {
+					var vertex = new THREE.Vector3();
+					vertex.x = 1000 * Math.random() - 500;
+					vertex.y = 1000 * Math.random() - 500;
+					vertex.z = 1000 * Math.random() - 500;
+					geometry.vertices.push( vertex );
+				}
+				material = new THREE.ParticleBasicMaterial( { size: 5, sizeAttenuation: false, transparent: true } );
+				material.color.setHex( 0xff00ff );
+				particles = new THREE.ParticleSystem( geometry, material );
+				particles.sortParticles = true;
+				scene.add( particles );
+				renderer.render( scene, camera );
+particles.rotation.y = Date.now() * 0.00005;
+var time = Date.now() * 0.0005;
+				h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
+				material.color.setHSL( h, 0.5, 0.5 );
+camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
+mesh.position.y = Math.sin( Date.now() * 0.002 ) * 300;
+			}
+
+			setup();
+			draw();
+
+		</script>
+
 </body>
 </html>
