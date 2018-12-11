@@ -5,13 +5,8 @@
  		<link rel="stylesheet" type="text/css" href="styles/Website.css">
  	</head>
  	<body>
- 		<ul>
-  			<li><a href="#home">Home</a></li>
- 		 	<li><a href="#news">News</a></li>
-  			<li><a href="#contact">Contact</a></li>
-  			<li><a href="#about">About</a></li>
-		</ul>
  		<h1>Hello There & Welcome</h1>
+<<<<<<< HEAD
 
  		<p>In this Page I will be addding things that I really like. I wanted to write this too let my computer stop trying to ask me if it wants it to translate lorem into this. Anyways This is my web page, what do you guys think? I know its alright you dont have to lie to me. I can take the hits. Live, love, and laugh is the right way to go. <a href="https://www.w3schools.com/tags/tag_body.asp">W3school</a></p>
 
@@ -50,6 +45,53 @@
 
 
 				// paste your code from the geometryGUI here
+=======
+    <p>In this Page I will be addding things that I really like.
+      I wanted to write this too let my computer stop trying to ask me if it wants it to translate lorem into this. Anyways This is my web page, what do you guys think?
+      I know its alright you dont have to lie to me. I can take the hits. Live, love, and laugh is the right way to go.<a href="Artist's statement">Artist statement<a
+      </p>
+
+    <h2>Here We Go ^.^</h2>
+    <p>Our First work to make we made Glitch Art. My inspiration was unclear at the time of making this so I ended up placing images of places I would like to go see.
+      The images I chose were from from, why rome because it somewhere that I would like to visit someday. However for the purpose of this project I would of love to see how this can turn out to be.</p>
+    <img src="Images/G.bmp" class="center" width="400" height="400">
+    <p>Here is a link to my 3D Meshup art of a type of mamoth that was created in a way to spark creative thinking.
+      For now Ill call it Eliphant. <a href="https://sketchfab.com/models/7b2f41316d24406280988212e047742b/">Sketchfab</a></p>
+    <h1>Getting Better :]</h1>
+    <p> For our next project that I have created was for Video art and Sound Art. We needed to create a video with sound and the purpose I used was to disturb with technology.
+      We are always on our phones that time seems to slip by us very quickly. Even when needed to make plans, we soon forget what we are suppost to do in order to complete our task.
+    The video purpose it to distrub you and show you life on a smartphone.</p>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/2Ufp18fvXiI"> </iframe>
+    <h2>Net Art Work At Its Finest</h2>
+    <p> My work on the Net Art was a blast of fun. Trying new codes to see where this could take it and the amount of struggle I had to use to get those codes to function properly.
+    This by far had to be the most hard working project to me since it required a lot of coding. In other words some codes work and other did not. Took a very long time to make sure all codes work together propely.
+  </p>
+  <body>
+
+  <script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+  <script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
+  <script>
+
+    if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+    var camera, scene, renderer;
+    var geometry, material, mesh;
+
+    function setup() {
+
+      var W = window.innerWidth, H = window.innerHeight;
+      renderer = new THREE.WebGLRenderer();
+      renderer.setSize( W, H );
+      document.body.appendChild( renderer.domElement );
+
+      camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+      camera.position.z = 500;
+
+      scene = new THREE.Scene();
+
+
+      // paste your code from the geometryGUI here
+>>>>>>> e0b8a35edd703503f6924e7cfc6476326eb70904
 map = THREE.ImageUtils.loadTexture('../texturez/water.jpg');
 geometry = new THREE.OctahedronGeometry(150, 0);
 material = new THREE.MeshBasicMaterial({shading: THREE.FlatShading, color: 0xf2abab, map: map, transparent: true, opacity: 0.64});
@@ -59,42 +101,68 @@ map.repeat.set( 1, 1 );
 scene.add(mesh);
 
 
-			}
+    }
 
-			function draw() {
+    function draw() {
 
+<<<<<<< HEAD
 				requestAnimationFrame( draw );
 
 				// experiment with code from the snippets menu here
 mesh.rotation.x = Date.now() * 0.0005;
 				mesh.rotation.y = Date.now() * 0.0002;
 				mesh.rotation.z = Date.now() * 0.001;
+=======
+      requestAnimationFrame( draw );
+
+      // experiment with code from the snippets menu here
+mesh.rotation.x = Date.now() * 0.0005;
+      mesh.rotation.y = Date.now() * 0.0002;
+      mesh.rotation.z = Date.now() * 0.001;
+>>>>>>> e0b8a35edd703503f6924e7cfc6476326eb70904
 geometry = new THREE.Geometry();
-				for ( i = 0; i < 500; i ++ ) {
-					var vertex = new THREE.Vector3();
-					vertex.x = 1000 * Math.random() - 500;
-					vertex.y = 1000 * Math.random() - 500;
-					vertex.z = 1000 * Math.random() - 500;
-					geometry.vertices.push( vertex );
-				}
-				material = new THREE.ParticleBasicMaterial( { size: 5, sizeAttenuation: false, transparent: true } );
-				material.color.setHex( 0xff00ff );
-				particles = new THREE.ParticleSystem( geometry, material );
-				particles.sortParticles = true;
-				scene.add( particles );
-				renderer.render( scene, camera );
+      for ( i = 0; i < 500; i ++ ) {
+        var vertex = new THREE.Vector3();
+        vertex.x = 1000 * Math.random() - 500;
+        vertex.y = 1000 * Math.random() - 500;
+        vertex.z = 1000 * Math.random() - 500;
+        geometry.vertices.push( vertex );
+      }
+      material = new THREE.ParticleBasicMaterial( { size: 3, sizeAttenuation: true, transparent: false } );
+      material.color.setHex( 0xff00ff );
+      particles = new THREE.ParticleSystem( geometry, material );
+      particles.sortParticles = true;
+      scene.add( particles );
+      renderer.render( scene, camera );
 particles.rotation.y = Date.now() * 0.00005;
 var time = Date.now() * 0.0005;
-				h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
-				material.color.setHSL( h, 0.5, 0.5 );
+      h = ( 360 * ( 1.0 + time ) % 360 ) / 360;
+      material.color.setHSL( h, 0.5, 0.5 );
 camera.position.x = Math.sin( Date.now() * 0.002 ) * 50;
 mesh.position.y = Math.sin( Date.now() * 0.002 ) * 300;
-			}
+    }
 
-			setup();
-			draw();
+    setup();
+    draw();
 
-		</script>
+  </script>
+  <style>
+img.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 200px;
+}
+</style>
+</head>
+<body>
+
+<h2>Artist Statement</h2>
+<img src="Images/ise.jpg" width="700" height="200">
+<h2>Read More</h2>
+<p>Many people take great comfort in the bathroom towels being the same color as the soap, toilet paper, and tiles. It means there is a connection between them, and an environment of order. Home is a place not only of comfort, but of control. This sense of order, in whatever form it takes, acts as a shield against the unpredictability and lurking chaos of the outside world.</p>
+
+<p>My work is an examination of the different forms this shield takes, and the thinking that lies behind it. I use domestic objects as the common denominators of our personal environment. Altering them is a way of questioning the attitudes, fears and unwritten rules which have formed that environment and our behavior within it</p>
 
 </body>
 </html>
